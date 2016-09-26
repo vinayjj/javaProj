@@ -1,0 +1,54 @@
+class Employee
+{	
+	int empId;
+	String empName;
+	double empSalary;
+	double bonus;
+	Employee(){}
+	Employee(int empId, string empName, double 
+	empSalary, double bonus)
+	{
+	this.empId=empId;
+	this.empName=empName;
+	this.empSalary=empSalary;
+	this.bonus=bonus;
+	}
+	void payBonus(double bonusAmt)
+	{
+	 //bonus+=bonusAmt; OR
+	System.out.println("Un defined");
+	}
+}
+class Manager extends Employee
+{
+	int numberOfShares;
+	Manager(){}
+	Manager(int empId, string empName, double 
+	empSalary, double bonus, int numberOfSlaes)
+	{
+	super(empId, empName,empSalary,bonus);
+	this.numberOfShares=numberOfShares;
+	}
+	//method overriding
+	void payBonus(double bonusAmt)
+	{
+	bonus+=bonusAmt;
+	numberOfShares+=10; // it is increased along with bonus
+	}
+}
+class Salesman extends Employee
+{
+	int numberOfSales ;
+	Manager(){}
+	Manager(int empId, string empName, double 
+	empSalary, double bonus, int numberOfSlaes)
+	{
+	super(empId, empName,empSalary,bonus);
+	this.numberOfSales=numberOfSales;
+	}
+	//method overriding
+	void payBonus(double bonusAmt)
+	{
+	bonus=bonusAmt+empSalary*0.1; // 10% salary is increased with bonus
+	} 
+}
